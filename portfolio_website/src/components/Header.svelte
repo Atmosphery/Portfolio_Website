@@ -18,15 +18,15 @@
 		<nav>
 			<ul>
 				<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-					<a href="/">About Me</a>
+					<a href="/aboutme">About Me</a>
 				</li>
 				|
 				<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-					<a href="/about">Resume</a>
+					<a href="/resume">Resume</a>
 				</li>
 				|
 				<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-					<a href="/sverdle">Portfolio</a>
+					<a href="/portfolio">Portfolio</a>
 				</li>
 			</ul>
 		</nav>
