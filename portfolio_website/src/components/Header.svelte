@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import LinkedIn from '$lib/images/LinkedIn.png';
 	import github from '$lib/images/github.svg';
+	import {link} from 'svelte-spa-router';
 </script>
 
 <header>
@@ -18,15 +19,15 @@
 		<nav>
 			<ul>
 				<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-					<a href="/aboutme">About Me</a>
+					<a href="/" use:link>About Me</a>
 				</li>
 				|
 				<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-					<a href="/resume">Resume</a>
+					<a href="/resume" use:link>Resume</a>
 				</li>
 				|
 				<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-					<a href="/portfolio">Portfolio</a>
+					<a href="/portfolio" use:link>Portfolio</a>
 				</li>
 			</ul>
 		</nav>

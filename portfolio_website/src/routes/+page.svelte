@@ -2,7 +2,8 @@
 	import AboutMe from '../components/About_Me.svelte';
     import Resume from '../components/Resume.svelte';
     import Portfolio from '../components/Portfolio.svelte';
-    import Router from 'svelte-spa-router'
+    import Router from 'svelte-spa-router';
+    
 
     const routes = {
         '/': AboutMe,
@@ -11,12 +12,12 @@
     }
 </script>
 
-<main>
+<body>
 	<Router {routes}/>
-</main>
+</body>
 
 <style>
-	main {
+	body {
 		text-align: center;
 	}
 </style>
