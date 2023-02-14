@@ -1,32 +1,31 @@
 <script>
-	import { page } from '$app/stores';
-	import LinkedIn from '$lib/images/LinkedIn.png';
-	import github from '$lib/images/github.svg';
-	import {link} from 'svelte-spa-router';
+	import { link } from "svelte-spa-router";
+
+	let src = "images/";
 </script>
 
 <header>
 	<div class="header-name">
+		<h1>Alec Beccaria</h1>
 		<div class="header-img">
-			<h1>Alec Beccaria</h1>
-			<a href="https://kit.svelte.dev">
-				<img src={LinkedIn} alt="Linked In" />
+			<a href="https://www.linkedin.com/in/alec-beccaria-8547231b8/">
+				<img src={src + "LinkedIn.png"} alt="Linked In" />
 			</a>
-			<a href="https://github.com/sveltejs/kit">
-				<img src={github} alt="GitHub" />
+			<a href="https://github.com/alecBeccaria">
+				<img src={src + "github.svg"} alt="GitHub" />
 			</a>
 		</div>
 		<nav>
 			<ul>
-				<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+				<li>
 					<a href="/" use:link>About Me</a>
 				</li>
 				|
-				<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
+				<li>
 					<a href="/resume" use:link>Resume</a>
 				</li>
 				|
-				<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
+				<li>
 					<a href="/portfolio" use:link>Portfolio</a>
 				</li>
 			</ul>
@@ -58,9 +57,7 @@
 	nav {
 		display: flex;
 		justify-content: center;
-
 	}
-
 
 	ul {
 		position: relative;
@@ -80,18 +77,6 @@
 		height: 100%;
 	}
 
-	li[aria-current='page']::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
-	}
-
 	nav a {
 		display: flex;
 		height: 100%;
@@ -99,7 +84,7 @@
 		padding: 0 0.5rem;
 		color: var(--color-text);
 		font-weight: 700;
-		font-size: 0.8rem;
+		font-size: 1rem;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		text-decoration: none;
