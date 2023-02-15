@@ -8,10 +8,18 @@
 	<div class="header-name">
 		<h1>Alec Beccaria</h1>
 		<div class="header-img">
-			<a href="https://www.linkedin.com/in/alec-beccaria-8547231b8/">
+			<a
+				href="https://www.linkedin.com/in/alec-beccaria-8547231b8/"
+				rel="noreferrer"
+				target="_blank"
+			>
 				<img src={src + "LinkedIn.png"} alt="Linked In" />
 			</a>
-			<a href="https://github.com/alecBeccaria">
+			<a
+				href="https://github.com/alecBeccaria"
+				rel="noreferrer"
+				target="_blank"
+			>
 				<img src={src + "github.svg"} alt="GitHub" />
 			</a>
 		</div>

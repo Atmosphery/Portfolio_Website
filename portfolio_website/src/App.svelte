@@ -11,7 +11,7 @@
 			<Router {routes} />
 		</body>
 	</div>
-	<footer>yo mamma</footer>
+	<footer>Alec Beccaria 2023</footer>
 </main>
 
 <style>
