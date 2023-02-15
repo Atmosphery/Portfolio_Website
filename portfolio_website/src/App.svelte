@@ -17,7 +17,7 @@
 <style>
 	.app {
 		margin: 50px 250px 50px 250px;
-		padding-bottom: 50px;
+		padding: 0px 200px 0px 200px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
