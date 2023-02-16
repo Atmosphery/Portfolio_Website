@@ -1,12 +1,19 @@
 <script>
-	import { link } from "svelte-spa-router";
+	import Router, { link } from "svelte-spa-router";
+	import { onMount } from 'svelte';
 
 	let src = "images/";
+    let url = window.location.pathname;
+	onMount(() => url = window.location.pathname);
+	console.log(url);
 </script>
 
 <header>
 	<div class="header-name">
-		<h1>Alec Beccaria</h1>
+		<a href="/" style="text-decoration:none">
+			<h1 class="header-title">Welcome to Alec Beccaria's Website!</h1>
+		</a>
+
 		<div class="header-img">
 			<a
 				href="https://www.linkedin.com/in/alec-beccaria-8547231b8/"
@@ -23,10 +30,11 @@
 				<img src={src + "github.svg"} alt="GitHub" />
 			</a>
 		</div>
+		{#if url != ""}
 		<nav>
 			<ul>
 				<li>
-					<a href="/" use:link>About Me</a>
+					<a href="/aboutme" use:link>About Me</a>
 				</li>
 				|
 				<li>
@@ -34,10 +42,11 @@
 				</li>
 				|
 				<li>
-					<a href="/portfolio" use:link>Portfolio</a>
+					<a href="/projects" use:link>Projects</a>
 				</li>
 			</ul>
 		</nav>
+		{/if}
 	</div>
 </header>
 
@@ -99,7 +108,11 @@
 		transition: color 0.2s linear;
 	}
 
-	a:hover {
+	nav a:hover {
 		color: blue;
+	}
+
+	a:visited {
+		color: white;
 	}
 </style>

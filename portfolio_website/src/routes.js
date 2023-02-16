@@ -1,9 +1,11 @@
 import AboutMe from "./components/About_Me.svelte";
-import Portfolio from "./components/Portfolio.svelte";
+import Projects from "./components/Projects.svelte";
 import Resume from "./components/Resume.svelte";
+import Landing from "./components/Landing.svelte"
 
 export const routes = {
-    "/": AboutMe,
-    "/portfolio": Portfolio,
+    "/": Landing,
+    "/aboutme": AboutMe,
+    "/projects": Projects,
     "/resume": Resume
 };
