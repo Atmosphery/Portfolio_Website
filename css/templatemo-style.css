@@ -171,11 +171,12 @@ h1,h2,h3,h4,h5
 /* start home */       
 #home
 	{
-        background: url('../images/home-bg.png');
-        background-size: 40%;
+        background: url('https://res.cloudinary.com/dtb5jogpv/image/upload/v1694634810/STScI-01GQ5CHESABWMHRF5NA60A6MPF_tbpokq.png');
+        /* background-size: 100%; */
         background-repeat: no-repeat;
         background-position: 10%;
         padding-top: 120px;
+        rotate: calc();
         padding-bottom: 140px;
         text-align: center;
 	}
